@@ -10,7 +10,11 @@ Typically when working with seeds a `{{ ref() }}` function is how you would refe
 
 ## Where do I find challenge details?
 
-Each challenge will have a `README.md` in its model subdirectory which will give some context to the challenge, these challenges are meant to be open-ended and you can approach and structure them how you feel is most apporpriate - feel free to add comments into the SQL to justify decisions so others can learn from your submissions.
+Each challenge will have a `README.md` in a subdirectory of the docs directory which will give some context to the challenge, these challenges are meant to be open-ended and you can approach and structure them how you feel is most apporpriate - feel free to add comments into the SQL to justify decisions so others can learn from your submissions.
+
+## Checking the results of your challenge
+
+This repository also has the `dbt_audit_helper` package specified in a `packages.yml` file. You can run `dbt deps` to install it and then use the package to test whether your output matches the output of the legacy query.
 
 
 ### Resources:
