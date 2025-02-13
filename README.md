@@ -1,10 +1,20 @@
-Welcome to your new dbt project!
+# Welcome to reFactor Friday!
 
-### Using the starter project
+This repository will house the starters for each challenge as they are released. I will be submitting my efforts at solving the challenges under a seperate branch called solution.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Setting up a challenge
+
+Each time I add a new challenge if new data is required I will be adding a file to the seeds directory so that it can be easily loaded into your database of choice with a `dbt seed` command. As the point of these challenges is to get familiar with updating legacy code into dbt modularized code, I have opted to use dbt seed despite it typically being more suited to static reference files because I want to encourage the simplicity in starting up to get people going with dbt.
+
+Typically when working with seeds a `{{ ref() }}` function is how you would refer back to a seed but in some instances we will nonetheless setup sources by loading in the data with seeds and then copying it to a new schema to allow us to set up sources and source.ymls.
+
+## Where do I find challenge details?
+
+Each challenge will have a `README.md` in a subdirectory of the docs directory which will give some context to the challenge, these challenges are meant to be open-ended and you can approach and structure them how you feel is most apporpriate - feel free to add comments into the SQL to justify decisions so others can learn from your submissions.
+
+## Checking the results of your challenge
+
+This repository also has the `dbt_audit_helper` package specified in a `packages.yml` file. You can run `dbt deps` to install it and then use the package to test whether your output matches the output of the legacy query.
 
 
 ### Resources:
