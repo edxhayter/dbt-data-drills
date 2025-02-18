@@ -12,11 +12,11 @@ SELECT
     flatten.value::int AS flight_id,
     booking_price,
     frequent_flyer_id
-from til_portfolio_projects.dbt_ehayter.bookings,
+from target_database.target_schema.bookings,
 LATERAL FLATTEN(input => TRY_PARSE_JSON(flight_ids)) flatten
 ) subquery
-LEFT JOIN til_portfolio_projects.dbt_ehayter.flights ON subquery.flight_id = flights.flight_id
-LEFT JOIN til_portfolio_projects.dbt_ehayter.customers ON subquery.frequent_flyer_id = customers.frequent_flyer_id
+LEFT JOIN target_database.target_schema.flights ON subquery.flight_id = flights.flight_id
+LEFT JOIN target_database.target_schema.customers ON subquery.frequent_flyer_id = customers.frequent_flyer_id
 )
 
 SELECT
