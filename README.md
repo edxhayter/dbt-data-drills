@@ -25,7 +25,7 @@ Feel free to add comments in your SQL code to explain your reasoning and decisio
 
 ## Challenge List
 
-The first challenge's details can be found in the [docs/challenge_1/readme.md](docs/challenge_1/readme.md) file.
+The first challenge is a refactor challenge and further details can be found [here](docs/challenge_1/readme.md).
 
 ## Checking Your Results
 
