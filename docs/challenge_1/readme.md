@@ -6,6 +6,8 @@ Refactor Airline currently computes yearly loyalty statuses using a SQL query wr
 
 They are exploring **dbt** as part of their data stack and have brought you in to refactor the existing query using **dbt best practices**. Your goal is to make the code **more interpretable** and **robust** so that any future issues can be quickly resolved, ensuring loyalty statuses continue to be assigned seamlessly at the start of each new year.
 
+**Note the original query was built for compatibility with Snowflake so may need adjustment to work with an alternative connection**
+
 ---
 
 ## 🏗️ Getting Started
