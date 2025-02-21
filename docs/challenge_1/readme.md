@@ -20,11 +20,11 @@ To set up the legacy script into a working state before refactoring:
 This will create tables in your warehouse, allowing you to work with the legacy query.
 
 2. **Update the Legacy Query**
-The legacy query references a placeholder schema:
-```
-target_database.target_schema
-```
-Replace this with the actual target_database.target_schema configured in your dbt project.
+    The legacy query references a placeholder schema:
+    ```
+    target_database.target_schema
+    ```
+    Replace this with the actual target_database.target_schema configured in your dbt project.
 
 ---
 
