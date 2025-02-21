@@ -10,6 +10,13 @@ While `dbt seed` is traditionally used for static reference files, I am opting t
 
 Typically, when working with seeds, the `{{ ref() }}` function is used to refer to a seed. However, in some instances, we will load the data using seeds, then copy it into a new schema. This enables us to set up sources and their corresponding `source.yml` configurations.
 
+If you want to use sources you could seed the tables and then copy them across to a new database/schema and then configure dbt source connection.
+
+```
+CREATE TABLE <destination_schema>.<destination_table> AS
+SELECT * FROM <source_schema>.<source_table>;
+```
+
 ## Challenge Details
 
 Each challenge will have a `README.md` located in a subdirectory under the `docs` folder. This file will contain the context and requirements for the challenge. These challenges are designed to be open-ended, so you are encouraged to approach and structure them as you see fit. 
