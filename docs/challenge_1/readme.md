@@ -1,4 +1,4 @@
-# 🛫 Preppin’ Data Challenge – Refactor Airline Loyalty Query
+# 🛫 dbt Data Drills 1 – Refactor Airline Loyalty Query
 
 ## ✈️ The Challenge
 
@@ -34,6 +34,10 @@ Note: While seeds provide a quick way to get started, they are typically used fo
 
     1. Seed the data into your warehouse
     2. Copy the seeded tables into another schema within your warehouse
+       ```
+       CREATE TABLE <destination_schema>.<destination_table> AS
+       SELECT * FROM <source_schema>.<source_table>;
+       ```
     3. Configure dbt sources to point to this new location
 
 This mirrors how data ingestion typically works in a dbt project where we configure sources to point at raw data to be processed.
