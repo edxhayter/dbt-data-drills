@@ -1,4 +1,4 @@
-# Welcome to reFactor Friday!
+# Welcome to dbt Data Drills!
 
 This repository hosts the starter templates for each challenge as they are released. I will also be submitting my solutions under a separate branch called `solution`.
 
