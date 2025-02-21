@@ -27,9 +27,9 @@ SELECT
     total_loyalty_spend,
     total_flights,
     CASE
-      WHEN total_mileage >= 10000 AND total_loyalty_spend >= 5000 AND total_flights >= 50 THEN 'Platinum'
-      WHEN total_mileage >= 5000 AND total_loyalty_spend >= 3000 AND total_flights >= 30 THEN 'Gold'
-      WHEN total_mileage >= 1000 AND total_loyalty_spend >= 1000 AND total_flights >= 10 THEN 'Silver'
+      WHEN total_mileage >= 10000 AND total_loyalty_spend >= 5000 AND total_flights >= 5 THEN 'Platinum'
+      WHEN total_mileage >= 5000 AND total_loyalty_spend >= 3000 AND total_flights >= 3 THEN 'Gold'
+      WHEN total_mileage >= 1000 AND total_loyalty_spend >= 1000 AND total_flights >= 1 THEN 'Silver'
       ELSE 'Bronze'
     END AS current_status,
 
@@ -44,3 +44,4 @@ sum(loyalty_spend) AS total_loyalty_spend
 FROM all_merge
 GROUP BY customer_id, YEAR(date(flight_date, 'dd/mm/yyyy')), frequent_flyer_id
 ) aggregated
+ORDER BY 2 ASC
