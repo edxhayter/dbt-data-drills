@@ -1,0 +1,43 @@
+version: 2
+
+models:
+
+  - name: customer_annual_loyalty
+    description: This is a table with a row per customer and year and their loyalty status for the next year.
+    config:
+      +materialized: table
+      contract:
+        enforced: true
+    columns:
+      - name: frequent_flyer_id
+        data_type: string
+        constraints:
+          - type: not_null
+          - type: unique
+
+      - name: customer_id
+        data_type: int
+        constraints:
+          - type: not_null
+          - type: unique
+   
+      - name: loyalty_year
+        data_type: int
+        constraints:
+          - type: not_null
+      
+      - name: total_mileage
+        data_type: int
+
+      - name: total_loyalty_spend
+        data_type: int
+
+      - name: total_flights
+        data_type: int
+
+      - name: current_status
+        data_type: string
+        data_tests:
+          - accepted_values:
+              values: ['Bronze', 'Silver', 'Gold', Platinum]
+
