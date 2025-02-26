@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: transform_air
+    database: dbt
+    schema: data_drill_sources
+
+    tables:
+      - name: bookings
+
+      - name: customers
+
+      - name: flights
+
+models:
+  - name: src_transform_air__bookings
+    config:
+      materialized: view
+
+  - name: src_transform_air__customers
+    config:
+      materialized: view
+
+  - name: src_transform_air__flights
+    config:
+      materialized: view
+    
