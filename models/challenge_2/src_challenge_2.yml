@@ -8,5 +8,7 @@ sources:
       - name: source_status__test
         loaded_at_field: load_timestamp
         freshness:
-          filter: datediff('day', load_timestamp, current_timestamp) < 2
+          warn_after:
+            count: 2 
+            period: day
       - name: dim_name
