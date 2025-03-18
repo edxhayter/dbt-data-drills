@@ -8,5 +8,5 @@ sources:
       - name: source_status__test
         loaded_at_field: load_timestamp
         freshness:
-          filter: datediff('day', _etl_loaded_at, current_timestamp) < 2
+          filter: datediff('day', load_timestamp, current_timestamp) < 2
       - name: dim_name
