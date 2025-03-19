@@ -4,7 +4,9 @@ This repository hosts the starter templates for each challenge as they are relea
 
 ## Setting up a challenge
 
-For each new challenge, if new data is required, I will add a file to the `seeds` directory. This file can be easily loaded into your database of choice using the `dbt seed` command. 
+For each new challenge, if new data is required, I will add a file to the `seeds` directory. This file can be easily loaded into your database of choice using the `dbt seed` command.
+If you are using a managed repository to work on these challenges, unfortunately the only way to bring the source `.csv` files into your project will be to manually copy them into `.csv` files that you create in your project before you can run the `dbt seed` command to load the data into your warehouse of choice.
+
 
 While `dbt seed` is traditionally used for static reference files, I am opting to use it here to simplify the process of getting started. The main goal of these challenges is to help you get comfortable with updating legacy code and transforming it into modularized dbt code. As such, we are focusing on making the setup process as easy as possible.
 
