@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: fresh_select
-    database: TIL_PORTFOLIO_PROJECTS
-    schema: ED_HAYTER
+    database: <database>
+    schema: <schema>
     tables:
       - name: source_status__test
