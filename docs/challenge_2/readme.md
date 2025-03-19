@@ -37,6 +37,16 @@ Welcome to the DBT challenge! Your task is to create a DBT job that only runs wh
   INSERT INTO source_status__test(value, load_timestamp)
   VALUES ('y', CURRENT_TIMESTAMP());
 ```
+## Expected Outcome
+
+We would be expecting a job that runs the following models after running the above insert statement:
+   - src__challenge_2
+   - stg__challenge_2
+   - int__challenge_2
+
+Your selector syntax is required to use some form of source_status: as a selector.
+
+## Hints
 
 <details>
   <summary>Hint 1</summary>
