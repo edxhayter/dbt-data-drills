@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: fresh_select
+    database: TIL_PORTFOLIO_PROJECTS
+    schema: ED_HAYTER
+    tables:
+      - name: source_status__test
+        loaded_at_field: load_timestamp
+        freshness:
+          warn_after:
+            count: 2 
+            period: day
+      - name: dim_name
