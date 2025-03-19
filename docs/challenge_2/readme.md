@@ -39,25 +39,51 @@ Welcome to the DBT challenge! Your task is to create a DBT job that only runs wh
 ```
 
 <details>
-  <summary>Hint 1: Freshness Block</summary>
-  
+  <summary>Hint 1</summary>
+
+  <br>  
+
+  **Freshness Block**  
+
+  <br>  
+
   To make your DBT job dependent on source freshness, you need to define a `freshness` block in `source.yml`.
 
+  <br>  
+
 </details>
 
 <details>
-  <summary>Hint 2: Multiple Jobs</summary>
-  
+  <summary>Hint 2</summary>
+
+  <br>  
+
+  **Multiple Jobs**  
+
+  <br>  
+
   You might need more than one job – one for the initial build and another to check the environment state before running transformations.
 
+  <br>  
+
 </details>
 
 <details>
-  <summary>Hint 3: Using Defer State</summary>
+  <summary>Hint 3</summary>
+
+  <br>  
+
+  **Using Defer State**  
+
+  <br>  
+
   When setting up the job configuration, you can use `defer` to reference previous runs and avoid unnecessary recomputation.
-  ![image](https://github.com/user-attachments/assets/d3d32804-572f-41b1-95c5-47dbb76683c0)
-  Where Challenge 2 is the production environment for the project.
+   ![image](https://github.com/user-attachments/assets/c463b83f-7aaf-4985-a7b1-38016bf61a85)
+   Where Challenge 2 is the production environment for the dbt Project
+   
+  <br>  
 
 </details>
+
 
 Check if your models run as expected!
