@@ -11,4 +11,5 @@ sources:
           warn_after:
             count: 2 
             period: day
+          filter: load_timestamp >= date_sub(current_date(), interval 2 day)
       - name: dim_name
