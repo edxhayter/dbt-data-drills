@@ -1,7 +1,7 @@
-WITH bookings AS (
+WITH booking_details AS (
     SELECT
         *
-    FROM {{ ref('staging_transform_air__bookings') }}
+    FROM {{ ref('staging_transform_air__booking_details') }}
 ),
 
 flights AS (
@@ -18,7 +18,7 @@ SELECT
         WHEN RANK() OVER (partition by booking_id ORDER BY flight_date ASC) = 1 
         THEN booking_price 
     END AS booking_spend
-FROM bookings
+FROM booking_details
 LEFT JOIN flights
-ON bookings.flight_id = flights.flight_id
+ON booking_details.flight_id = flights.flight_id
 QUALIFY booking_spend IS NOT NULL

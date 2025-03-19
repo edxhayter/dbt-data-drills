@@ -1,7 +1,7 @@
-WITH bookings AS (
+WITH bookings_details AS (
     SELECT
         *
-    FROM {{ ref('staging_transform_air__bookings') }}
+    FROM {{ ref('staging_transform_air__booking_details') }}
 ),
 
 flights AS (
@@ -11,14 +11,14 @@ flights AS (
 )
 
 SELECT
-    bookings.booking_flight_id,
-    bookings.booking_id,
-    bookings.flight_id,
-    bookings.frequent_flyer_id,
+    booking_details.booking_flight_id,
+    booking_details.booking_id,
+    booking_details.flight_id,
+    booking_details.frequent_flyer_id,
     
     flights.flight_date,
     flights.mileage
 
-FROM bookings
+FROM booking_details
 LEFT JOIN flights
-ON bookings.flight_id = flights.flight_id
+ON booking_details.flight_id = flights.flight_id

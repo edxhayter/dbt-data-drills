@@ -5,4 +5,4 @@ SELECT
     flight_id,
     booking_price,
     frequent_flyer_id
-FROM {{ ref('base_transform_air__bookings') }}
+FROM {{ ref('base_transform_air__booking_details') }}
