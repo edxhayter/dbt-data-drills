@@ -2,7 +2,16 @@ version: 2
 
 sources:
   - name: fresh_select
-    database: <database>
-    schema: <schema>
+    database: "{{ target.database }}"
+    schema: "{{ target.schema }}"
     tables:
       - name: source_status__test
+      - name: dim_name
+
+models:
+  - name: stg__challenge_2
+    columns:
+      - name: value
+        data_tests:
+          - unique
+
