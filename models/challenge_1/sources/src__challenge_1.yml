@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: transform_air
-    database: dbt
-    schema: data_drill_sources
+    database: "{{ target.database }}"
+    schema: "{{ target.schema }}"
 
     tables:
       - name: bookings
