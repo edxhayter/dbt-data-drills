@@ -27,7 +27,8 @@ Feel free to add comments in your SQL code to explain your reasoning and decisio
 
 ## Challenge List
 
-The first challenge is a refactor challenge and further details can be found [here](docs/challenge_1/readme.md).
+-- The first challenge is a refactor challenge and further details can be found [here](docs/challenge_1/readme.md).
+-- Challenge 2 is a job creation, selector syntax and source freshness challenge with details that can be found [here](docs/challenge_2/readme.md)
 
 ## Checking Your Results
 
