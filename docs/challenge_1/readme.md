@@ -14,20 +14,13 @@ They are exploring **dbt** as part of their data stack and have brought you in t
 
 To set up the legacy script into a working state before refactoring:
 
-1. **Load the Data**
+**Load the Data**
    If you are using a managed repository rather than a forked version of this repository then you will need to copy the relevant .csv files into your seeds sub-sidrectory before running the command below.
    The dataset is preconfigured using **seeds**, so running the following command will load the `.csv` files into your warehouse:  
    ```
    dbt seed
    ```
 This will create tables in your warehouse, allowing you to work with the legacy query.
-
-2. **Update the Legacy Query**
-    The legacy query references a placeholder schema:
-    ```
-    target_database.target_schema
-    ```
-    Replace this with the actual target_database.target_schema configured in your dbt project.
 
 ---
 
